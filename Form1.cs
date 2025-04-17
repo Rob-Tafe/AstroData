@@ -86,7 +86,7 @@ namespace AstroData
                     // Call the DisplayDataArray method to show the values on the listbox
                     DisplayDataArray();
                     Application.DoEvents();
-                    Thread.Sleep(50);
+                    // Thread.Sleep(50);
                 }
             }
         } // End of Bubble Sort button method
