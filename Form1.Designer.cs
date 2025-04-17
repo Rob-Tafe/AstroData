@@ -43,6 +43,7 @@
             this.ButtonRandomData.TabIndex = 0;
             this.ButtonRandomData.Text = "Load Astrometric Data";
             this.ButtonRandomData.UseVisualStyleBackColor = true;
+            this.ButtonRandomData.Click += new System.EventHandler(this.ButtonRandomData_Click);
             // 
             // ListBoxData
             // 
