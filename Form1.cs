@@ -55,7 +55,7 @@ namespace AstroData
             // for loop
             for (int i = 0; i < dataValueQty; i++)
             {
-                ListBoxData.Items.Add(dataArray[i]);
+                ListBoxData.Items.Add($"{i+1}.            {dataArray[i]}");
             }
 
         }

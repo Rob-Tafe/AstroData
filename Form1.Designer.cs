@@ -33,6 +33,8 @@
             this.ButtonBubbleSort = new System.Windows.Forms.Button();
             this.TextBoxSearch = new System.Windows.Forms.TextBox();
             this.ButtonBinarySearch = new System.Windows.Forms.Button();
+            this.LabelListBoxData = new System.Windows.Forms.Label();
+            this.LabelBinarySearch = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ButtonRandomData
@@ -48,14 +50,14 @@
             // ListBoxData
             // 
             this.ListBoxData.FormattingEnabled = true;
-            this.ListBoxData.Location = new System.Drawing.Point(13, 52);
+            this.ListBoxData.Location = new System.Drawing.Point(12, 64);
             this.ListBoxData.Name = "ListBoxData";
             this.ListBoxData.Size = new System.Drawing.Size(139, 303);
             this.ListBoxData.TabIndex = 1;
             // 
             // ButtonBubbleSort
             // 
-            this.ButtonBubbleSort.Location = new System.Drawing.Point(176, 52);
+            this.ButtonBubbleSort.Location = new System.Drawing.Point(166, 64);
             this.ButtonBubbleSort.Name = "ButtonBubbleSort";
             this.ButtonBubbleSort.Size = new System.Drawing.Size(75, 23);
             this.ButtonBubbleSort.TabIndex = 2;
@@ -64,25 +66,45 @@
             // 
             // TextBoxSearch
             // 
-            this.TextBoxSearch.Location = new System.Drawing.Point(176, 160);
+            this.TextBoxSearch.Location = new System.Drawing.Point(166, 154);
             this.TextBoxSearch.Name = "TextBoxSearch";
             this.TextBoxSearch.Size = new System.Drawing.Size(86, 20);
             this.TextBoxSearch.TabIndex = 3;
             // 
             // ButtonBinarySearch
             // 
-            this.ButtonBinarySearch.Location = new System.Drawing.Point(176, 131);
+            this.ButtonBinarySearch.Location = new System.Drawing.Point(166, 180);
             this.ButtonBinarySearch.Name = "ButtonBinarySearch";
             this.ButtonBinarySearch.Size = new System.Drawing.Size(86, 23);
             this.ButtonBinarySearch.TabIndex = 4;
             this.ButtonBinarySearch.Text = "Binary Search";
             this.ButtonBinarySearch.UseVisualStyleBackColor = true;
             // 
+            // LabelListBoxData
+            // 
+            this.LabelListBoxData.AutoSize = true;
+            this.LabelListBoxData.Location = new System.Drawing.Point(10, 48);
+            this.LabelListBoxData.Name = "LabelListBoxData";
+            this.LabelListBoxData.Size = new System.Drawing.Size(78, 13);
+            this.LabelListBoxData.TabIndex = 5;
+            this.LabelListBoxData.Text = "Index.     Value";
+            // 
+            // LabelBinarySearch
+            // 
+            this.LabelBinarySearch.AutoSize = true;
+            this.LabelBinarySearch.Location = new System.Drawing.Point(163, 138);
+            this.LabelBinarySearch.Name = "LabelBinarySearch";
+            this.LabelBinarySearch.Size = new System.Drawing.Size(36, 13);
+            this.LabelBinarySearch.TabIndex = 6;
+            this.LabelBinarySearch.Text = "Index:";
+            // 
             // AstroDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 404);
+            this.ClientSize = new System.Drawing.Size(264, 380);
+            this.Controls.Add(this.LabelBinarySearch);
+            this.Controls.Add(this.LabelListBoxData);
             this.Controls.Add(this.ButtonBinarySearch);
             this.Controls.Add(this.TextBoxSearch);
             this.Controls.Add(this.ButtonBubbleSort);
@@ -102,6 +124,8 @@
         private System.Windows.Forms.Button ButtonBubbleSort;
         private System.Windows.Forms.TextBox TextBoxSearch;
         private System.Windows.Forms.Button ButtonBinarySearch;
+        private System.Windows.Forms.Label LabelListBoxData;
+        private System.Windows.Forms.Label LabelBinarySearch;
     }
 }
 
