@@ -80,29 +80,28 @@ namespace AstroData
                         dataArray[inner] = arrayValueStorage;
                     }
 
-                    // Clear any previous data that was written to the list box
+                    // Clear any previous data that was written to the listbox
                     ListBoxData.Items.Clear();
 
-                    // Call the DisplayDataArray method to show the values on the list box
+                    // Call the DisplayDataArray method to show the values on the listbox
                     DisplayDataArray();
                     Application.DoEvents();
-                    // Thread.Sleep(50);
+                    Thread.Sleep(50);
                 }
             }
+        } // End of Bubble Sort button method
 
 
-        }// End of Bubble Sort button method
 
-
-        // Method to display the array in the list box
+        // Method to display the array in the listbox
         private void DisplayDataArray()
         {
+            // This for loop iterates through and prints each line of the array to the listbox
             for (int i = 0; i < dataValueQty; i++)
             {
                 ListBoxData.Items.Add($"{i + 1}.            {dataArray[i]}");
             }
-        }
-
+        } // End of DisplayDataArray method
 
 
 
