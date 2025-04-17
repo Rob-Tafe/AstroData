@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// Added threading for timing options
+using System.Threading;
+
+
+
 namespace AstroData
 {
     public partial class AstroDataForm : Form
@@ -25,7 +30,8 @@ namespace AstroData
         private void ButtonRandomData_Click(object sender, EventArgs e)
         {
             // Here we will create a random number to add to our array of data values,
-            // and we will do this until the array has 
+            // and we will do this until the array has the max number of entries.
+
         }
 
 
