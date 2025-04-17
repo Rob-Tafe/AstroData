@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AstroData
 {
-    public partial class Form1 : Form
+    public partial class AstroDataForm : Form
     {
-        public Form1()
+        public AstroDataForm()
         {
             InitializeComponent();
         }
