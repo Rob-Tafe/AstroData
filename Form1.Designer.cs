@@ -63,6 +63,7 @@
             this.ButtonBubbleSort.TabIndex = 2;
             this.ButtonBubbleSort.Text = "Bubble Sort";
             this.ButtonBubbleSort.UseVisualStyleBackColor = true;
+            this.ButtonBubbleSort.Click += new System.EventHandler(this.ButtonBubbleSort_Click);
             // 
             // TextBoxSearch
             // 

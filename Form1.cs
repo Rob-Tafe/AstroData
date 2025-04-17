@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 // Added threading for timing options
 using System.Threading;
+using System.Runtime.CompilerServices;
 
 
 
@@ -36,6 +37,7 @@ namespace AstroData
 
 
 
+        // This is the method that runs when we click the Get Astrometric Data button
         private void ButtonRandomData_Click(object sender, EventArgs e)
         {
             // Clear any previous data that was written to the list box
@@ -53,12 +55,54 @@ namespace AstroData
 
             // Then the array will be displayed in the listbox named "ListBoxData" via a 
             // for loop
-            for (int i = 0; i < dataValueQty; i++)
+            DisplayDataArray();
+
+        }// End of Random Data button method
+
+
+
+        // This is the method that runs when we click the Bubble Sort button
+        private void ButtonBubbleSort_Click(object sender, EventArgs e)
+        {
+            // Here we declare a variable to store the value of the array that is being reorganised
+            int arrayValueStorage = 0;
+
+            // This is the for loop that will organise our array of values
+            for (int outer = 0; outer < dataValueQty; outer++)
             {
-                ListBoxData.Items.Add($"{i+1}.            {dataArray[i]}");
+                for (int inner = 0;  inner < dataValueQty - 1; inner++)
+                {
+                    if (dataArray[inner] > dataArray[inner + 1])
+                    {
+                        // This is the routine that moves the values around in the array
+                        arrayValueStorage = dataArray[inner + 1];
+                        dataArray[inner + 1] = dataArray[inner];
+                        dataArray[inner] = arrayValueStorage;
+                    }
+
+                    // Clear any previous data that was written to the list box
+                    ListBoxData.Items.Clear();
+
+                    // Call the DisplayDataArray method to show the values on the list box
+                    DisplayDataArray();
+                    Application.DoEvents();
+                    // Thread.Sleep(50);
+                }
             }
 
+
+        }// End of Bubble Sort button method
+
+
+        // Method to display the array in the list box
+        private void DisplayDataArray()
+        {
+            for (int i = 0; i < dataValueQty; i++)
+            {
+                ListBoxData.Items.Add($"{i + 1}.            {dataArray[i]}");
+            }
         }
+
 
 
 
