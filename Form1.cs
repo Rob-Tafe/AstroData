@@ -105,5 +105,8 @@ namespace AstroData
 
 
 
-    }
-}
+    } // End of AstroDataForm : Form partial class
+
+
+
+} // End of AstroData namespace
