@@ -64,7 +64,7 @@ namespace AstroData
             // for loop
             DisplayDataArray();
 
-        }// End of Random Data button method
+        } // End of Random Data button method
 
 
 
