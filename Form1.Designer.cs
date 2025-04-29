@@ -35,6 +35,10 @@
             this.ButtonBinarySearch = new System.Windows.Forms.Button();
             this.LabelListBoxData = new System.Windows.Forms.Label();
             this.LabelBinarySearch = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ButtonInputData = new System.Windows.Forms.Button();
+            this.LabelInputValue = new System.Windows.Forms.Label();
+            this.ButtonDeleteData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ButtonRandomData
@@ -67,14 +71,14 @@
             // 
             // TextBoxSearch
             // 
-            this.TextBoxSearch.Location = new System.Drawing.Point(166, 154);
+            this.TextBoxSearch.Location = new System.Drawing.Point(166, 142);
             this.TextBoxSearch.Name = "TextBoxSearch";
             this.TextBoxSearch.Size = new System.Drawing.Size(86, 20);
             this.TextBoxSearch.TabIndex = 3;
             // 
             // ButtonBinarySearch
             // 
-            this.ButtonBinarySearch.Location = new System.Drawing.Point(166, 180);
+            this.ButtonBinarySearch.Location = new System.Drawing.Point(166, 168);
             this.ButtonBinarySearch.Name = "ButtonBinarySearch";
             this.ButtonBinarySearch.Size = new System.Drawing.Size(86, 23);
             this.ButtonBinarySearch.TabIndex = 4;
@@ -94,17 +98,55 @@
             // LabelBinarySearch
             // 
             this.LabelBinarySearch.AutoSize = true;
-            this.LabelBinarySearch.Location = new System.Drawing.Point(163, 138);
+            this.LabelBinarySearch.Location = new System.Drawing.Point(163, 126);
             this.LabelBinarySearch.Name = "LabelBinarySearch";
             this.LabelBinarySearch.Size = new System.Drawing.Size(37, 13);
             this.LabelBinarySearch.TabIndex = 6;
             this.LabelBinarySearch.Text = "Value:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(166, 244);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(86, 20);
+            this.textBox1.TabIndex = 7;
+            // 
+            // ButtonInputData
+            // 
+            this.ButtonInputData.Location = new System.Drawing.Point(166, 270);
+            this.ButtonInputData.Name = "ButtonInputData";
+            this.ButtonInputData.Size = new System.Drawing.Size(86, 23);
+            this.ButtonInputData.TabIndex = 8;
+            this.ButtonInputData.Text = "Input Data";
+            this.ButtonInputData.UseVisualStyleBackColor = true;
+            // 
+            // LabelInputValue
+            // 
+            this.LabelInputValue.AutoSize = true;
+            this.LabelInputValue.Location = new System.Drawing.Point(163, 228);
+            this.LabelInputValue.Name = "LabelInputValue";
+            this.LabelInputValue.Size = new System.Drawing.Size(64, 13);
+            this.LabelInputValue.TabIndex = 9;
+            this.LabelInputValue.Text = "Input Value:";
+            // 
+            // ButtonDeleteData
+            // 
+            this.ButtonDeleteData.Location = new System.Drawing.Point(166, 331);
+            this.ButtonDeleteData.Name = "ButtonDeleteData";
+            this.ButtonDeleteData.Size = new System.Drawing.Size(86, 37);
+            this.ButtonDeleteData.TabIndex = 10;
+            this.ButtonDeleteData.Text = "Delete Selected Data";
+            this.ButtonDeleteData.UseVisualStyleBackColor = true;
             // 
             // AstroDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 380);
+            this.Controls.Add(this.ButtonDeleteData);
+            this.Controls.Add(this.LabelInputValue);
+            this.Controls.Add(this.ButtonInputData);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.LabelBinarySearch);
             this.Controls.Add(this.LabelListBoxData);
             this.Controls.Add(this.ButtonBinarySearch);
@@ -128,6 +170,10 @@
         private System.Windows.Forms.Button ButtonBinarySearch;
         private System.Windows.Forms.Label LabelListBoxData;
         private System.Windows.Forms.Label LabelBinarySearch;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button ButtonInputData;
+        private System.Windows.Forms.Label LabelInputValue;
+        private System.Windows.Forms.Button ButtonDeleteData;
     }
 }
 

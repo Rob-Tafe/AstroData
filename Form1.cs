@@ -145,7 +145,7 @@ namespace AstroData
                 }
                 else if (target > highBound)
                 {
-                    MessageBox.Show("Search target out of bounds, try again.");
+                    MessageBox.Show("Search target out of bounds.");
                     return;
                 }
                 else
@@ -153,7 +153,7 @@ namespace AstroData
                     lowBound = mid + 1;
                 }
             }
-            MessageBox.Show("Not found, try again.");
+            MessageBox.Show("Target value not found.");
 
         } // End of binary search method
 
