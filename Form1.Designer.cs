@@ -80,6 +80,7 @@
             this.ButtonBinarySearch.TabIndex = 4;
             this.ButtonBinarySearch.Text = "Binary Search";
             this.ButtonBinarySearch.UseVisualStyleBackColor = true;
+            this.ButtonBinarySearch.Click += new System.EventHandler(this.ButtonBinarySearch_Click);
             // 
             // LabelListBoxData
             // 
@@ -95,9 +96,9 @@
             this.LabelBinarySearch.AutoSize = true;
             this.LabelBinarySearch.Location = new System.Drawing.Point(163, 138);
             this.LabelBinarySearch.Name = "LabelBinarySearch";
-            this.LabelBinarySearch.Size = new System.Drawing.Size(36, 13);
+            this.LabelBinarySearch.Size = new System.Drawing.Size(37, 13);
             this.LabelBinarySearch.TabIndex = 6;
-            this.LabelBinarySearch.Text = "Index:";
+            this.LabelBinarySearch.Text = "Value:";
             // 
             // AstroDataForm
             // 

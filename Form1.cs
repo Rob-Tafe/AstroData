@@ -96,6 +96,7 @@ namespace AstroData
         // Method to display the array in the listbox
         private void DisplayDataArray()
         {
+            ListBoxData.Items.Clear();
             // This for loop iterates through and prints each line of the array to the listbox
             for (int i = 0; i < dataValueQty; i++)
             {
@@ -105,5 +106,55 @@ namespace AstroData
 
 
 
+        // Binary search method
+        private void ButtonBinarySearch_Click(object sender, EventArgs e)
+        {
+            int mid;
+            int lowBound = 0;
+            int highBound = dataValueQty;
+            int target;
+
+            if (!Int32.TryParse(TextBoxSearch.Text, out target)) {
+                MessageBox.Show("You must enter an Integer.");
+                return;
+            }
+
+            while (lowBound <= highBound)
+            {
+                // Display data
+                DisplayDataArray();
+
+                // Find mid point
+                mid = (lowBound + highBound) / 2;
+
+                if (dataArray[mid] == target)
+                {
+                    // Target found
+                    ListBoxData.Items.Add("Found at index " + (mid + 1));
+                    return;
+                }
+                else if (dataArray[mid] >= target)
+                {
+                    highBound = mid - 1;
+                }
+                else if (target > highBound)
+                {
+                    MessageBox.Show("Search target out of bounds, try again.");
+                    return;
+                }
+                else
+                {
+                    lowBound = mid + 1;
+                }
+            }
+            MessageBox.Show("Not found, try again.");
+
+        } // End of binary search method
+
+
+
     }
+
+
+
 }
