@@ -16,6 +16,9 @@ using System.Runtime.CompilerServices;
 
 namespace AstroData
 {
+
+
+
     public partial class AstroDataForm : Form
     {
 
@@ -27,6 +30,7 @@ namespace AstroData
         }
 
 
+        // Start of Global variables area
 
         // This is where we declare the global variable that will control the max number of values
         // that can be in our array of astrometric data
@@ -34,6 +38,8 @@ namespace AstroData
 
         // This is where we declare our array of astrometric data
         int[] dataArray = new int[dataValueQty];
+
+        // End of Global variables area
 
 
 
@@ -153,8 +159,8 @@ namespace AstroData
 
 
 
-    } 
+    } // End of partial public class AstroDataForm : Form
 
 
 
-}
+} // End of namespace AstroData
