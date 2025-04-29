@@ -35,7 +35,7 @@
             this.ButtonBinarySearch = new System.Windows.Forms.Button();
             this.LabelListBoxData = new System.Windows.Forms.Label();
             this.LabelBinarySearch = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextBoxInputData = new System.Windows.Forms.TextBox();
             this.ButtonInputData = new System.Windows.Forms.Button();
             this.LabelInputValue = new System.Windows.Forms.Label();
             this.ButtonDeleteData = new System.Windows.Forms.Button();
@@ -104,12 +104,12 @@
             this.LabelBinarySearch.TabIndex = 6;
             this.LabelBinarySearch.Text = "Value:";
             // 
-            // textBox1
+            // TextBoxInputData
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 244);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(86, 20);
-            this.textBox1.TabIndex = 7;
+            this.TextBoxInputData.Location = new System.Drawing.Point(166, 244);
+            this.TextBoxInputData.Name = "TextBoxInputData";
+            this.TextBoxInputData.Size = new System.Drawing.Size(86, 20);
+            this.TextBoxInputData.TabIndex = 7;
             // 
             // ButtonInputData
             // 
@@ -146,7 +146,7 @@
             this.Controls.Add(this.ButtonDeleteData);
             this.Controls.Add(this.LabelInputValue);
             this.Controls.Add(this.ButtonInputData);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextBoxInputData);
             this.Controls.Add(this.LabelBinarySearch);
             this.Controls.Add(this.LabelListBoxData);
             this.Controls.Add(this.ButtonBinarySearch);
@@ -170,7 +170,7 @@
         private System.Windows.Forms.Button ButtonBinarySearch;
         private System.Windows.Forms.Label LabelListBoxData;
         private System.Windows.Forms.Label LabelBinarySearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextBoxInputData;
         private System.Windows.Forms.Button ButtonInputData;
         private System.Windows.Forms.Label LabelInputValue;
         private System.Windows.Forms.Button ButtonDeleteData;

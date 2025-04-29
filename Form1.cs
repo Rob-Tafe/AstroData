@@ -11,6 +11,7 @@ using System.Windows.Forms;
 // Added threading for timing options
 using System.Threading;
 using System.Runtime.CompilerServices;
+using System.Diagnostics.Eventing.Reader;
 
 
 
@@ -117,7 +118,7 @@ namespace AstroData
         {
             int mid;
             int lowBound = 0;
-            int highBound = dataValueQty;
+            int highBound = dataValueQty - 1;
             int target;
 
             if (!Int32.TryParse(TextBoxSearch.Text, out target)) {
@@ -125,7 +126,17 @@ namespace AstroData
                 return;
             }
 
-            while (lowBound <= highBound)
+            // This if statement checks to make sure that the value being searched is in the
+            // range of the data and returns an error message if it isn't
+            if (target < dataArray[0] || target > dataArray[highBound])
+            {
+                DisplayDataArray();
+                MessageBox.Show("Target is outside the range of the data.");
+                return;
+
+            }
+
+            while ((lowBound <= highBound))
             {
                 // Display data
                 DisplayDataArray();
@@ -137,16 +148,12 @@ namespace AstroData
                 {
                     // Target found
                     ListBoxData.Items.Add("Found at index " + (mid + 1));
+                    ListBoxData.SetSelected(mid, true);
                     return;
                 }
                 else if (dataArray[mid] >= target)
                 {
                     highBound = mid - 1;
-                }
-                else if (target > highBound)
-                {
-                    MessageBox.Show("Search target out of bounds.");
-                    return;
                 }
                 else
                 {
@@ -156,6 +163,18 @@ namespace AstroData
             MessageBox.Show("Target value not found.");
 
         } // End of binary search method
+
+
+
+        // Method to prevent non numeric inputs in the TextBoxDataInput
+        private void TextBoxDataInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && !char.IsControl(ch))
+            {
+                e.Handled = true;
+            }
+        } // End of method to prevent non numeric inputs in TextBoxDataInput
 
 
 
