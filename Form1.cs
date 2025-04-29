@@ -40,6 +40,9 @@ namespace AstroData
         // This is where we declare our array of astrometric data
         int[] dataArray = new int[dataValueQty];
 
+        // This is the variable we will use for adding data to our array
+        int emptyVal = 0;
+
         // End of Global variables area
 
 
@@ -175,6 +178,10 @@ namespace AstroData
                 e.Handled = true;
             }
         } // End of method to prevent non numeric inputs in TextBoxDataInput
+
+
+
+
 
 
 
