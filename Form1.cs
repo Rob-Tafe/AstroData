@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Runtime.CompilerServices;
 using System.Diagnostics.Eventing.Reader;
+using System.Xml.Schema;
 
 
 
@@ -181,7 +182,51 @@ namespace AstroData
 
 
 
+        // Data input method
+        private void ButtonInputData_Click(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(TextBoxInputData.Text)))
+            {
+                for (int x = 0; x < dataValueQty; x++)
+                {
+                    if (dataArray[x] == 0)
+                    {
+                        dataArray[x] = int.Parse(TextBoxInputData.Text);
+                        emptyVal++;
+                        break;
+                    }
+                }
+            }
+            // Sort elements with integer values.
+            // Ignore those with default values.
+            Array.Sort(dataArray, 0, emptyVal);
+            TextBoxInputData.Clear();
+            TextBoxInputData.Focus();
+            DisplayDataArray();
+            if (emptyVal >= dataValueQty)
+            {
+                MessageBox.Show("Data array is now full", "Error message (Input method)");
+            }
+        } // End of Data input method
 
+
+
+        private void ButtonDeleteData_Click(object sender, EventArgs e)
+        {
+            if (!(ListBoxData.SelectedIndex == -1))
+            {
+                string currIndex = ListBoxData.SelectedItem.ToString();
+                int indx = ListBoxData.FindString(currIndex);
+                dataArray[indx] = dataArray[emptyVal];
+                dataArray[emptyVal] = 0;
+                Array.Sort(dataArray, 0, emptyVal);
+                DisplayDataArray();
+            }
+            else
+            {
+                MessageBox.Show("Select an item for deletion from the data", "Error message (Delete method)");
+            }
+        }
 
 
 

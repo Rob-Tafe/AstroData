@@ -119,6 +119,7 @@
             this.ButtonInputData.TabIndex = 8;
             this.ButtonInputData.Text = "Input Data";
             this.ButtonInputData.UseVisualStyleBackColor = true;
+            this.ButtonInputData.Click += new System.EventHandler(this.ButtonInputData_Click);
             // 
             // LabelInputValue
             // 
@@ -137,6 +138,7 @@
             this.ButtonDeleteData.TabIndex = 10;
             this.ButtonDeleteData.Text = "Delete Selected Data";
             this.ButtonDeleteData.UseVisualStyleBackColor = true;
+            this.ButtonDeleteData.Click += new System.EventHandler(this.ButtonDeleteData_Click);
             // 
             // AstroDataForm
             // 
