@@ -44,6 +44,9 @@ namespace AstroData
         // This is the variable we will use for adding data to our array
         int emptyVal = 0;
 
+        // This is the variable that will be used to delete things from our array
+        int delVal = 0;
+
         // End of Global variables area
 
 
@@ -126,7 +129,7 @@ namespace AstroData
             int target;
 
             if (!Int32.TryParse(TextBoxSearch.Text, out target)) {
-                MessageBox.Show("You must enter an Integer.");
+                MessageBox.Show("You must enter an Integer.", "Error message (Binary search method)");
                 return;
             }
 
@@ -135,7 +138,7 @@ namespace AstroData
             if (target < dataArray[0] || target > dataArray[highBound])
             {
                 DisplayDataArray();
-                MessageBox.Show("Target is outside the range of the data.");
+                MessageBox.Show("Target is outside the range of the data.", "Error message (Binary search method)");
                 return;
 
             }
@@ -164,7 +167,7 @@ namespace AstroData
                     lowBound = mid + 1;
                 }
             }
-            MessageBox.Show("Target value not found.");
+            MessageBox.Show("Target value not found.", "Error message (Binary search method)");
 
         } // End of binary search method
 
@@ -217,9 +220,9 @@ namespace AstroData
             {
                 string currIndex = ListBoxData.SelectedItem.ToString();
                 int indx = ListBoxData.FindString(currIndex);
-                dataArray[indx] = dataArray[emptyVal];
-                dataArray[emptyVal] = 0;
-                Array.Sort(dataArray, 0, emptyVal);
+                dataArray[indx] = dataArray[delVal];
+                dataArray[delVal] = 0;
+                Array.Sort(dataArray, 0, delVal);
                 DisplayDataArray();
             }
             else
