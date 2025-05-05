@@ -182,6 +182,9 @@ namespace AstroData
                 {
                     lowBound = mid + 1;
                 }
+
+                // Clear the search box once data is found
+                TextBoxSearch.Clear();
             }
             MessageBox.Show("Target value not found.", "Error message (Binary search method)");
 

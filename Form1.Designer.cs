@@ -98,11 +98,11 @@
             // LabelBinarySearch
             // 
             this.LabelBinarySearch.AutoSize = true;
-            this.LabelBinarySearch.Location = new System.Drawing.Point(163, 126);
+            this.LabelBinarySearch.Location = new System.Drawing.Point(166, 126);
             this.LabelBinarySearch.Name = "LabelBinarySearch";
-            this.LabelBinarySearch.Size = new System.Drawing.Size(37, 13);
+            this.LabelBinarySearch.Size = new System.Drawing.Size(86, 13);
             this.LabelBinarySearch.TabIndex = 6;
-            this.LabelBinarySearch.Text = "Value:";
+            this.LabelBinarySearch.Text = "Value to Search:";
             // 
             // TextBoxInputData
             // 
@@ -115,24 +115,24 @@
             // 
             this.ButtonInputData.Location = new System.Drawing.Point(166, 270);
             this.ButtonInputData.Name = "ButtonInputData";
-            this.ButtonInputData.Size = new System.Drawing.Size(86, 23);
+            this.ButtonInputData.Size = new System.Drawing.Size(86, 36);
             this.ButtonInputData.TabIndex = 8;
-            this.ButtonInputData.Text = "Input Data";
+            this.ButtonInputData.Text = "Edit Selected Data";
             this.ButtonInputData.UseVisualStyleBackColor = true;
             this.ButtonInputData.Click += new System.EventHandler(this.ButtonInputData_Click);
             // 
             // LabelInputValue
             // 
             this.LabelInputValue.AutoSize = true;
-            this.LabelInputValue.Location = new System.Drawing.Point(163, 228);
+            this.LabelInputValue.Location = new System.Drawing.Point(165, 228);
             this.LabelInputValue.Name = "LabelInputValue";
-            this.LabelInputValue.Size = new System.Drawing.Size(64, 13);
+            this.LabelInputValue.Size = new System.Drawing.Size(76, 13);
             this.LabelInputValue.TabIndex = 9;
-            this.LabelInputValue.Text = "Input Value:";
+            this.LabelInputValue.Text = "Value to Input:";
             // 
             // ButtonDeleteData
             // 
-            this.ButtonDeleteData.Location = new System.Drawing.Point(166, 331);
+            this.ButtonDeleteData.Location = new System.Drawing.Point(166, 330);
             this.ButtonDeleteData.Name = "ButtonDeleteData";
             this.ButtonDeleteData.Size = new System.Drawing.Size(86, 37);
             this.ButtonDeleteData.TabIndex = 10;
