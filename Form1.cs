@@ -41,6 +41,9 @@ namespace AstroData
         // This is where we declare our array of astrometric data
         int[] dataArray = new int[dataValueQty];
 
+        // This array tracks the filled positions of dataArray
+        bool[] isFilledArray = new bool[dataValueQty]; 
+
         // This is the variable we will use for adding data to our array
         int emptyVal = 0;
 
@@ -64,7 +67,8 @@ namespace AstroData
             // This is the for loop that will add random values to 'dataArray' until it is full
             for (int i = 0; i < dataValueQty; i++)
             {
-                dataArray[i] = randValue.Next(100);
+                dataArray[i] = randValue.Next(1, 101);
+                isFilledArray[i] = true;
             }
 
             // Then the array will be displayed in the listbox named "ListBoxData" via a 
@@ -188,28 +192,35 @@ namespace AstroData
         // Data input method
         private void ButtonInputData_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(TextBoxInputData.Text)))
+            int inputVal;
+            if (!int.TryParse(TextBoxInputData.Text, out inputVal))
             {
-                for (int x = 0; x < dataValueQty; x++)
+                MessageBox.Show("You must enter a valid integer.", "Error message (Input error)");
+                TextBoxInputData.Clear();
+                TextBoxInputData.Focus();
+                return;
+            }
+
+            bool inserted = false;
+            for (int x = 0; x < dataValueQty; x++)
+            {
+                if (!(ListBoxData.SelectedIndex == -1))
                 {
-                    if (dataArray[x] == 0)
-                    {
-                        dataArray[x] = int.Parse(TextBoxInputData.Text);
-                        emptyVal++;
-                        break;
-                    }
+                    string currIndexInput = ListBoxData.SelectedItem.ToString();
+                    int indxInput = ListBoxData.FindString(currIndexInput);
+                    dataArray[indxInput] = inputVal;
+                    isFilledArray[indxInput] = true;
+                    inserted = true;
+                    break;
                 }
             }
-            // Sort elements with integer values.
-            // Ignore those with default values.
-            Array.Sort(dataArray, 0, emptyVal);
-            TextBoxInputData.Clear();
-            TextBoxInputData.Focus();
-            DisplayDataArray();
-            if (emptyVal >= dataValueQty)
+
+            if (!inserted)
             {
-                MessageBox.Show("Data array is now full", "Error message (Input method)");
+                MessageBox.Show("Data array is now ful.", "Error message (Input method)");
             }
+            
+
         } // End of Data input method
 
 
@@ -218,10 +229,11 @@ namespace AstroData
         {
             if (!(ListBoxData.SelectedIndex == -1))
             {
-                string currIndex = ListBoxData.SelectedItem.ToString();
-                int indx = ListBoxData.FindString(currIndex);
-                dataArray[indx] = dataArray[delVal];
+                string currIndexDel = ListBoxData.SelectedItem.ToString();
+                int indxDel = ListBoxData.FindString(currIndexDel);
+                dataArray[indxDel] = dataArray[delVal];
                 dataArray[delVal] = 0;
+                isFilledArray[delVal] = false;
                 Array.Sort(dataArray, 0, delVal);
                 DisplayDataArray();
             }
