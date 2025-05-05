@@ -202,22 +202,23 @@ namespace AstroData
             }
 
             bool inserted = false;
-            for (int x = 0; x < dataValueQty; x++)
+            if (!(ListBoxData.SelectedIndex == -1))
             {
-                if (!(ListBoxData.SelectedIndex == -1))
-                {
-                    string currIndexInput = ListBoxData.SelectedItem.ToString();
-                    int indxInput = ListBoxData.FindString(currIndexInput);
-                    dataArray[indxInput] = inputVal;
-                    isFilledArray[indxInput] = true;
-                    inserted = true;
-                    break;
-                }
+                string currIndexInput = ListBoxData.SelectedItem.ToString();
+                int indxInput = ListBoxData.FindString(currIndexInput);
+                dataArray[indxInput] = inputVal;
+                isFilledArray[indxInput] = true;
+                inserted = true;
+                Array.Sort(dataArray, 0, indxInput);
+                DisplayDataArray();
+
+                // Clear the text box
+                TextBoxInputData.Clear();
             }
 
             if (!inserted)
             {
-                MessageBox.Show("Data array is now ful.", "Error message (Input method)");
+                MessageBox.Show("Data array is now full.", "Error message (Input method)");
             }
             
 
