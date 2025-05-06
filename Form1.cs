@@ -1,12 +1,14 @@
-﻿// Program: AstroData
+﻿// Program:     AstroData
 //
-// Description: A Forms application that will receive data input and display the data in a list box, with options to sort the data, and search for a specific value based on user input.
+// Description: A Forms application that will receive data input and display
+//              the data in a list box, with options to sort the data, and search
+//              for a specific value based on user input.
 //
-// Author: Robert Sewell
+// Author:      Robert Sewell
 //
-// Date: 17 / 04 / 2025
+// Date:        17 / 04 / 2025
 //
-// Version: 0.1
+// Version:     0.1
 
 
 
@@ -142,7 +144,7 @@ namespace AstroData
             int mid;
             int lowBound = 0;
             int highBound = dataValueQty - 1;
-            int target;
+            int target = 0;
 
             if (!Int32.TryParse(TextBoxSearch.Text, out target)) {
                 MessageBox.Show("You must enter an Integer.", "Error message (Binary search method)");
@@ -217,7 +219,7 @@ namespace AstroData
             }
 
             bool inserted = false;
-            if (!(ListBoxData.SelectedIndex == -1))
+            if (!(ListBoxData.SelectedIndex == -1) && (ListBoxData.SelectedIndex == 0))
             {
                 string currIndexInput = ListBoxData.SelectedItem.ToString();
                 int indxInput = ListBoxData.FindString(currIndexInput);
