@@ -158,7 +158,6 @@ namespace AstroData
                 DisplayDataArray();
                 MessageBox.Show("Target is outside the range of the data.", "Error message (Binary search method)");
                 return;
-
             }
 
             while ((lowBound <= highBound))
@@ -225,7 +224,6 @@ namespace AstroData
                 int indxInput = ListBoxData.FindString(currIndexInput);
                 dataArray[indxInput] = inputVal;
                 isFilledArray[indxInput] = true;
-                inserted = true;
                 Array.Sort(dataArray, 0, indxInput);
                 DisplayDataArray();
 
