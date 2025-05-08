@@ -64,9 +64,6 @@ namespace AstroData
         // This array tracks the filled positions of dataArray
         bool[] isFilledArray = new bool[dataValueQty]; 
 
-        // This is the variable we will use for adding data to our array
-        int emptyVal = 0;
-
         // This is the variable that will be used to delete things from our array
         int delVal = 0;
 
