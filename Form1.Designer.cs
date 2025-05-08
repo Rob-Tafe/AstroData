@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ButtonRandomData = new System.Windows.Forms.Button();
             this.ListBoxData = new System.Windows.Forms.ListBox();
             this.ButtonBubbleSort = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             this.TextBoxMode = new System.Windows.Forms.TextBox();
             this.TextBoxAverage = new System.Windows.Forms.TextBox();
             this.TextBoxRange = new System.Windows.Forms.TextBox();
+            this.TTListBoxdata = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // ButtonRandomData
@@ -67,6 +69,8 @@
             this.ListBoxData.Name = "ListBoxData";
             this.ListBoxData.Size = new System.Drawing.Size(118, 290);
             this.ListBoxData.TabIndex = 1;
+            this.TTListBoxdata.SetToolTip(this.ListBoxData, "This is where the astrometric data\r\nwill be displayed. You can select a\r\nvalue to" +
+        " edit or delete.");
             // 
             // ButtonBubbleSort
             // 
@@ -115,14 +119,14 @@
             // 
             // TextBoxInputData
             // 
-            this.TextBoxInputData.Location = new System.Drawing.Point(271, 225);
+            this.TextBoxInputData.Location = new System.Drawing.Point(271, 229);
             this.TextBoxInputData.Name = "TextBoxInputData";
             this.TextBoxInputData.Size = new System.Drawing.Size(98, 20);
             this.TextBoxInputData.TabIndex = 7;
             // 
             // ButtonInputData
             // 
-            this.ButtonInputData.Location = new System.Drawing.Point(270, 252);
+            this.ButtonInputData.Location = new System.Drawing.Point(270, 256);
             this.ButtonInputData.Name = "ButtonInputData";
             this.ButtonInputData.Size = new System.Drawing.Size(100, 35);
             this.ButtonInputData.TabIndex = 8;
@@ -133,7 +137,7 @@
             // LabelInputValue
             // 
             this.LabelInputValue.AutoSize = true;
-            this.LabelInputValue.Location = new System.Drawing.Point(270, 209);
+            this.LabelInputValue.Location = new System.Drawing.Point(270, 213);
             this.LabelInputValue.Name = "LabelInputValue";
             this.LabelInputValue.Size = new System.Drawing.Size(76, 13);
             this.LabelInputValue.TabIndex = 9;
@@ -280,6 +284,7 @@
         private System.Windows.Forms.TextBox TextBoxMode;
         private System.Windows.Forms.TextBox TextBoxAverage;
         private System.Windows.Forms.TextBox TextBoxRange;
+        private System.Windows.Forms.ToolTip TTListBoxdata;
     }
 }
 
