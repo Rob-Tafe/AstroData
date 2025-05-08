@@ -229,8 +229,6 @@ namespace AstroData
 
                     // Clear the text box
                     TextBoxInputData.Clear();
-
-
             }
 
             
