@@ -39,13 +39,22 @@
             this.ButtonInputData = new System.Windows.Forms.Button();
             this.LabelInputValue = new System.Windows.Forms.Label();
             this.ButtonDeleteData = new System.Windows.Forms.Button();
+            this.ButtonMidExtreme = new System.Windows.Forms.Button();
+            this.ButtonMode = new System.Windows.Forms.Button();
+            this.ButtonAverage = new System.Windows.Forms.Button();
+            this.ButtonRange = new System.Windows.Forms.Button();
+            this.buttonSequentialSearch = new System.Windows.Forms.Button();
+            this.TextBoxMidExtreme = new System.Windows.Forms.TextBox();
+            this.TextBoxMode = new System.Windows.Forms.TextBox();
+            this.TextBoxAverage = new System.Windows.Forms.TextBox();
+            this.TextBoxRange = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ButtonRandomData
             // 
-            this.ButtonRandomData.Location = new System.Drawing.Point(13, 13);
+            this.ButtonRandomData.Location = new System.Drawing.Point(140, 10);
             this.ButtonRandomData.Name = "ButtonRandomData";
-            this.ButtonRandomData.Size = new System.Drawing.Size(139, 23);
+            this.ButtonRandomData.Size = new System.Drawing.Size(120, 35);
             this.ButtonRandomData.TabIndex = 0;
             this.ButtonRandomData.Text = "Load Astrometric Data";
             this.ButtonRandomData.UseVisualStyleBackColor = true;
@@ -54,16 +63,16 @@
             // ListBoxData
             // 
             this.ListBoxData.FormattingEnabled = true;
-            this.ListBoxData.Location = new System.Drawing.Point(12, 64);
+            this.ListBoxData.Location = new System.Drawing.Point(141, 70);
             this.ListBoxData.Name = "ListBoxData";
-            this.ListBoxData.Size = new System.Drawing.Size(139, 303);
+            this.ListBoxData.Size = new System.Drawing.Size(118, 290);
             this.ListBoxData.TabIndex = 1;
             // 
             // ButtonBubbleSort
             // 
-            this.ButtonBubbleSort.Location = new System.Drawing.Point(166, 64);
+            this.ButtonBubbleSort.Location = new System.Drawing.Point(290, 10);
             this.ButtonBubbleSort.Name = "ButtonBubbleSort";
-            this.ButtonBubbleSort.Size = new System.Drawing.Size(75, 23);
+            this.ButtonBubbleSort.Size = new System.Drawing.Size(100, 35);
             this.ButtonBubbleSort.TabIndex = 2;
             this.ButtonBubbleSort.Text = "Bubble Sort";
             this.ButtonBubbleSort.UseVisualStyleBackColor = true;
@@ -71,16 +80,16 @@
             // 
             // TextBoxSearch
             // 
-            this.TextBoxSearch.Location = new System.Drawing.Point(166, 119);
+            this.TextBoxSearch.Location = new System.Drawing.Point(291, 85);
             this.TextBoxSearch.Name = "TextBoxSearch";
-            this.TextBoxSearch.Size = new System.Drawing.Size(86, 20);
+            this.TextBoxSearch.Size = new System.Drawing.Size(98, 20);
             this.TextBoxSearch.TabIndex = 3;
             // 
             // ButtonBinarySearch
             // 
-            this.ButtonBinarySearch.Location = new System.Drawing.Point(166, 145);
+            this.ButtonBinarySearch.Location = new System.Drawing.Point(290, 110);
             this.ButtonBinarySearch.Name = "ButtonBinarySearch";
-            this.ButtonBinarySearch.Size = new System.Drawing.Size(86, 23);
+            this.ButtonBinarySearch.Size = new System.Drawing.Size(100, 35);
             this.ButtonBinarySearch.TabIndex = 4;
             this.ButtonBinarySearch.Text = "Binary Search";
             this.ButtonBinarySearch.UseVisualStyleBackColor = true;
@@ -89,16 +98,16 @@
             // LabelListBoxData
             // 
             this.LabelListBoxData.AutoSize = true;
-            this.LabelListBoxData.Location = new System.Drawing.Point(10, 48);
+            this.LabelListBoxData.Location = new System.Drawing.Point(140, 55);
             this.LabelListBoxData.Name = "LabelListBoxData";
-            this.LabelListBoxData.Size = new System.Drawing.Size(78, 13);
+            this.LabelListBoxData.Size = new System.Drawing.Size(81, 13);
             this.LabelListBoxData.TabIndex = 5;
-            this.LabelListBoxData.Text = "Index.     Value";
+            this.LabelListBoxData.Text = "Index.      Value";
             // 
             // LabelBinarySearch
             // 
             this.LabelBinarySearch.AutoSize = true;
-            this.LabelBinarySearch.Location = new System.Drawing.Point(166, 103);
+            this.LabelBinarySearch.Location = new System.Drawing.Point(290, 70);
             this.LabelBinarySearch.Name = "LabelBinarySearch";
             this.LabelBinarySearch.Size = new System.Drawing.Size(86, 13);
             this.LabelBinarySearch.TabIndex = 6;
@@ -106,16 +115,16 @@
             // 
             // TextBoxInputData
             // 
-            this.TextBoxInputData.Location = new System.Drawing.Point(166, 202);
+            this.TextBoxInputData.Location = new System.Drawing.Point(291, 225);
             this.TextBoxInputData.Name = "TextBoxInputData";
-            this.TextBoxInputData.Size = new System.Drawing.Size(86, 20);
+            this.TextBoxInputData.Size = new System.Drawing.Size(98, 20);
             this.TextBoxInputData.TabIndex = 7;
             // 
             // ButtonInputData
             // 
-            this.ButtonInputData.Location = new System.Drawing.Point(166, 228);
+            this.ButtonInputData.Location = new System.Drawing.Point(290, 252);
             this.ButtonInputData.Name = "ButtonInputData";
-            this.ButtonInputData.Size = new System.Drawing.Size(86, 36);
+            this.ButtonInputData.Size = new System.Drawing.Size(100, 35);
             this.ButtonInputData.TabIndex = 8;
             this.ButtonInputData.Text = "Edit Selected Data";
             this.ButtonInputData.UseVisualStyleBackColor = true;
@@ -124,7 +133,7 @@
             // LabelInputValue
             // 
             this.LabelInputValue.AutoSize = true;
-            this.LabelInputValue.Location = new System.Drawing.Point(166, 186);
+            this.LabelInputValue.Location = new System.Drawing.Point(290, 209);
             this.LabelInputValue.Name = "LabelInputValue";
             this.LabelInputValue.Size = new System.Drawing.Size(76, 13);
             this.LabelInputValue.TabIndex = 9;
@@ -132,19 +141,105 @@
             // 
             // ButtonDeleteData
             // 
-            this.ButtonDeleteData.Location = new System.Drawing.Point(166, 330);
+            this.ButtonDeleteData.Location = new System.Drawing.Point(290, 325);
             this.ButtonDeleteData.Name = "ButtonDeleteData";
-            this.ButtonDeleteData.Size = new System.Drawing.Size(86, 37);
+            this.ButtonDeleteData.Size = new System.Drawing.Size(100, 35);
             this.ButtonDeleteData.TabIndex = 10;
             this.ButtonDeleteData.Text = "Delete Selected Data";
             this.ButtonDeleteData.UseVisualStyleBackColor = true;
             this.ButtonDeleteData.Click += new System.EventHandler(this.ButtonDeleteData_Click);
             // 
+            // ButtonMidExtreme
+            // 
+            this.ButtonMidExtreme.Location = new System.Drawing.Point(10, 70);
+            this.ButtonMidExtreme.Name = "ButtonMidExtreme";
+            this.ButtonMidExtreme.Size = new System.Drawing.Size(100, 30);
+            this.ButtonMidExtreme.TabIndex = 11;
+            this.ButtonMidExtreme.Text = "Mid-Extreme";
+            this.ButtonMidExtreme.UseVisualStyleBackColor = true;
+            // 
+            // ButtonMode
+            // 
+            this.ButtonMode.Location = new System.Drawing.Point(10, 145);
+            this.ButtonMode.Name = "ButtonMode";
+            this.ButtonMode.Size = new System.Drawing.Size(100, 30);
+            this.ButtonMode.TabIndex = 12;
+            this.ButtonMode.Text = "Mode";
+            this.ButtonMode.UseVisualStyleBackColor = true;
+            // 
+            // ButtonAverage
+            // 
+            this.ButtonAverage.Location = new System.Drawing.Point(10, 225);
+            this.ButtonAverage.Name = "ButtonAverage";
+            this.ButtonAverage.Size = new System.Drawing.Size(100, 30);
+            this.ButtonAverage.TabIndex = 13;
+            this.ButtonAverage.Text = "Average";
+            this.ButtonAverage.UseVisualStyleBackColor = true;
+            // 
+            // ButtonRange
+            // 
+            this.ButtonRange.Location = new System.Drawing.Point(10, 305);
+            this.ButtonRange.Name = "ButtonRange";
+            this.ButtonRange.Size = new System.Drawing.Size(100, 30);
+            this.ButtonRange.TabIndex = 14;
+            this.ButtonRange.Text = "Range";
+            this.ButtonRange.UseVisualStyleBackColor = true;
+            // 
+            // buttonSequentialSearch
+            // 
+            this.buttonSequentialSearch.Location = new System.Drawing.Point(290, 150);
+            this.buttonSequentialSearch.Name = "buttonSequentialSearch";
+            this.buttonSequentialSearch.Size = new System.Drawing.Size(100, 35);
+            this.buttonSequentialSearch.TabIndex = 15;
+            this.buttonSequentialSearch.Text = "Sequential Search";
+            this.buttonSequentialSearch.UseVisualStyleBackColor = true;
+            // 
+            // TextBoxMidExtreme
+            // 
+            this.TextBoxMidExtreme.Location = new System.Drawing.Point(11, 105);
+            this.TextBoxMidExtreme.Name = "TextBoxMidExtreme";
+            this.TextBoxMidExtreme.ReadOnly = true;
+            this.TextBoxMidExtreme.Size = new System.Drawing.Size(98, 20);
+            this.TextBoxMidExtreme.TabIndex = 16;
+            // 
+            // TextBoxMode
+            // 
+            this.TextBoxMode.Location = new System.Drawing.Point(11, 180);
+            this.TextBoxMode.Name = "TextBoxMode";
+            this.TextBoxMode.ReadOnly = true;
+            this.TextBoxMode.Size = new System.Drawing.Size(98, 20);
+            this.TextBoxMode.TabIndex = 17;
+            // 
+            // TextBoxAverage
+            // 
+            this.TextBoxAverage.Location = new System.Drawing.Point(11, 260);
+            this.TextBoxAverage.Name = "TextBoxAverage";
+            this.TextBoxAverage.ReadOnly = true;
+            this.TextBoxAverage.Size = new System.Drawing.Size(98, 20);
+            this.TextBoxAverage.TabIndex = 18;
+            // 
+            // TextBoxRange
+            // 
+            this.TextBoxRange.Location = new System.Drawing.Point(11, 340);
+            this.TextBoxRange.Name = "TextBoxRange";
+            this.TextBoxRange.ReadOnly = true;
+            this.TextBoxRange.Size = new System.Drawing.Size(98, 20);
+            this.TextBoxRange.TabIndex = 19;
+            // 
             // AstroDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 380);
+            this.ClientSize = new System.Drawing.Size(399, 370);
+            this.Controls.Add(this.TextBoxRange);
+            this.Controls.Add(this.TextBoxAverage);
+            this.Controls.Add(this.TextBoxMode);
+            this.Controls.Add(this.TextBoxMidExtreme);
+            this.Controls.Add(this.buttonSequentialSearch);
+            this.Controls.Add(this.ButtonRange);
+            this.Controls.Add(this.ButtonAverage);
+            this.Controls.Add(this.ButtonMode);
+            this.Controls.Add(this.ButtonMidExtreme);
             this.Controls.Add(this.ButtonDeleteData);
             this.Controls.Add(this.LabelInputValue);
             this.Controls.Add(this.ButtonInputData);
@@ -176,6 +271,15 @@
         private System.Windows.Forms.Button ButtonInputData;
         private System.Windows.Forms.Label LabelInputValue;
         private System.Windows.Forms.Button ButtonDeleteData;
+        private System.Windows.Forms.Button ButtonMidExtreme;
+        private System.Windows.Forms.Button ButtonMode;
+        private System.Windows.Forms.Button ButtonAverage;
+        private System.Windows.Forms.Button ButtonRange;
+        private System.Windows.Forms.Button buttonSequentialSearch;
+        private System.Windows.Forms.TextBox TextBoxMidExtreme;
+        private System.Windows.Forms.TextBox TextBoxMode;
+        private System.Windows.Forms.TextBox TextBoxAverage;
+        private System.Windows.Forms.TextBox TextBoxRange;
     }
 }
 

@@ -127,6 +127,7 @@ namespace AstroData
                     // Thread.Sleep(50);
                 }
             }
+
         } // End of Bubble Sort button method
 
 
@@ -140,6 +141,7 @@ namespace AstroData
             {
                 ListBoxData.Items.Add($"{i + 1}.            {dataArray[i]}");
             }
+
         } // End of DisplayDataArray method
 
 
@@ -207,6 +209,7 @@ namespace AstroData
             {
                 e.Handled = true;
             }
+
         } // End of method to prevent non numeric inputs in TextBoxDataInput
 
 
@@ -236,10 +239,12 @@ namespace AstroData
                     // Clear the text box
                     TextBoxInputData.Clear();
             }
+
         } // End of Data input method
 
 
 
+        // Data delete method
         private void ButtonDeleteData_Click(object sender, EventArgs e)
         {
             if (!(ListBoxData.SelectedIndex == -1))
@@ -256,6 +261,8 @@ namespace AstroData
             {
                 MessageBox.Show("Select an item for deletion from the data", "Error message (Delete method)");
             }
+
+        } // End of data delete method
 
 
 
