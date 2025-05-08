@@ -52,7 +52,7 @@
             // 
             // ButtonRandomData
             // 
-            this.ButtonRandomData.Location = new System.Drawing.Point(140, 10);
+            this.ButtonRandomData.Location = new System.Drawing.Point(130, 10);
             this.ButtonRandomData.Name = "ButtonRandomData";
             this.ButtonRandomData.Size = new System.Drawing.Size(120, 35);
             this.ButtonRandomData.TabIndex = 0;
@@ -63,14 +63,14 @@
             // ListBoxData
             // 
             this.ListBoxData.FormattingEnabled = true;
-            this.ListBoxData.Location = new System.Drawing.Point(141, 70);
+            this.ListBoxData.Location = new System.Drawing.Point(131, 70);
             this.ListBoxData.Name = "ListBoxData";
             this.ListBoxData.Size = new System.Drawing.Size(118, 290);
             this.ListBoxData.TabIndex = 1;
             // 
             // ButtonBubbleSort
             // 
-            this.ButtonBubbleSort.Location = new System.Drawing.Point(290, 10);
+            this.ButtonBubbleSort.Location = new System.Drawing.Point(270, 10);
             this.ButtonBubbleSort.Name = "ButtonBubbleSort";
             this.ButtonBubbleSort.Size = new System.Drawing.Size(100, 35);
             this.ButtonBubbleSort.TabIndex = 2;
@@ -80,14 +80,14 @@
             // 
             // TextBoxSearch
             // 
-            this.TextBoxSearch.Location = new System.Drawing.Point(291, 85);
+            this.TextBoxSearch.Location = new System.Drawing.Point(271, 85);
             this.TextBoxSearch.Name = "TextBoxSearch";
             this.TextBoxSearch.Size = new System.Drawing.Size(98, 20);
             this.TextBoxSearch.TabIndex = 3;
             // 
             // ButtonBinarySearch
             // 
-            this.ButtonBinarySearch.Location = new System.Drawing.Point(290, 110);
+            this.ButtonBinarySearch.Location = new System.Drawing.Point(270, 110);
             this.ButtonBinarySearch.Name = "ButtonBinarySearch";
             this.ButtonBinarySearch.Size = new System.Drawing.Size(100, 35);
             this.ButtonBinarySearch.TabIndex = 4;
@@ -98,7 +98,7 @@
             // LabelListBoxData
             // 
             this.LabelListBoxData.AutoSize = true;
-            this.LabelListBoxData.Location = new System.Drawing.Point(140, 55);
+            this.LabelListBoxData.Location = new System.Drawing.Point(130, 55);
             this.LabelListBoxData.Name = "LabelListBoxData";
             this.LabelListBoxData.Size = new System.Drawing.Size(81, 13);
             this.LabelListBoxData.TabIndex = 5;
@@ -107,7 +107,7 @@
             // LabelBinarySearch
             // 
             this.LabelBinarySearch.AutoSize = true;
-            this.LabelBinarySearch.Location = new System.Drawing.Point(290, 70);
+            this.LabelBinarySearch.Location = new System.Drawing.Point(270, 70);
             this.LabelBinarySearch.Name = "LabelBinarySearch";
             this.LabelBinarySearch.Size = new System.Drawing.Size(86, 13);
             this.LabelBinarySearch.TabIndex = 6;
@@ -115,14 +115,14 @@
             // 
             // TextBoxInputData
             // 
-            this.TextBoxInputData.Location = new System.Drawing.Point(291, 225);
+            this.TextBoxInputData.Location = new System.Drawing.Point(271, 225);
             this.TextBoxInputData.Name = "TextBoxInputData";
             this.TextBoxInputData.Size = new System.Drawing.Size(98, 20);
             this.TextBoxInputData.TabIndex = 7;
             // 
             // ButtonInputData
             // 
-            this.ButtonInputData.Location = new System.Drawing.Point(290, 252);
+            this.ButtonInputData.Location = new System.Drawing.Point(270, 252);
             this.ButtonInputData.Name = "ButtonInputData";
             this.ButtonInputData.Size = new System.Drawing.Size(100, 35);
             this.ButtonInputData.TabIndex = 8;
@@ -133,7 +133,7 @@
             // LabelInputValue
             // 
             this.LabelInputValue.AutoSize = true;
-            this.LabelInputValue.Location = new System.Drawing.Point(290, 209);
+            this.LabelInputValue.Location = new System.Drawing.Point(270, 209);
             this.LabelInputValue.Name = "LabelInputValue";
             this.LabelInputValue.Size = new System.Drawing.Size(76, 13);
             this.LabelInputValue.TabIndex = 9;
@@ -141,7 +141,7 @@
             // 
             // ButtonDeleteData
             // 
-            this.ButtonDeleteData.Location = new System.Drawing.Point(290, 325);
+            this.ButtonDeleteData.Location = new System.Drawing.Point(270, 325);
             this.ButtonDeleteData.Name = "ButtonDeleteData";
             this.ButtonDeleteData.Size = new System.Drawing.Size(100, 35);
             this.ButtonDeleteData.TabIndex = 10;
@@ -187,7 +187,7 @@
             // 
             // buttonSequentialSearch
             // 
-            this.buttonSequentialSearch.Location = new System.Drawing.Point(290, 150);
+            this.buttonSequentialSearch.Location = new System.Drawing.Point(270, 150);
             this.buttonSequentialSearch.Name = "buttonSequentialSearch";
             this.buttonSequentialSearch.Size = new System.Drawing.Size(100, 35);
             this.buttonSequentialSearch.TabIndex = 15;
@@ -230,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 370);
+            this.ClientSize = new System.Drawing.Size(380, 371);
             this.Controls.Add(this.TextBoxRange);
             this.Controls.Add(this.TextBoxAverage);
             this.Controls.Add(this.TextBoxMode);
