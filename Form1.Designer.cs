@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AstroDataForm));
             this.ButtonRandomData = new System.Windows.Forms.Button();
             this.ListBoxData = new System.Windows.Forms.ListBox();
             this.ButtonBubbleSort = new System.Windows.Forms.Button();
@@ -50,6 +51,9 @@
             this.TextBoxAverage = new System.Windows.Forms.TextBox();
             this.TextBoxRange = new System.Windows.Forms.TextBox();
             this.TTListBoxdata = new System.Windows.Forms.ToolTip(this.components);
+            this.TTAstroDataButton = new System.Windows.Forms.ToolTip(this.components);
+            this.TTBubbleSort = new System.Windows.Forms.ToolTip(this.components);
+            this.TTMidExtreme = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // ButtonRandomData
@@ -59,6 +63,8 @@
             this.ButtonRandomData.Size = new System.Drawing.Size(120, 35);
             this.ButtonRandomData.TabIndex = 0;
             this.ButtonRandomData.Text = "Load Astrometric Data";
+            this.TTAstroDataButton.SetToolTip(this.ButtonRandomData, "This button will generate an array of\r\nastrometric data and display it in the\r\nli" +
+        "st box.");
             this.ButtonRandomData.UseVisualStyleBackColor = true;
             this.ButtonRandomData.Click += new System.EventHandler(this.ButtonRandomData_Click);
             // 
@@ -70,7 +76,7 @@
             this.ListBoxData.Size = new System.Drawing.Size(118, 290);
             this.ListBoxData.TabIndex = 1;
             this.TTListBoxdata.SetToolTip(this.ListBoxData, "This is where the astrometric data\r\nwill be displayed. You can select a\r\nvalue to" +
-        " edit or delete.");
+        " be edited or deleted.");
             // 
             // ButtonBubbleSort
             // 
@@ -79,6 +85,7 @@
             this.ButtonBubbleSort.Size = new System.Drawing.Size(100, 35);
             this.ButtonBubbleSort.TabIndex = 2;
             this.ButtonBubbleSort.Text = "Bubble Sort";
+            this.TTBubbleSort.SetToolTip(this.ButtonBubbleSort, "This button will sort the data displayed\r\nin the list box in ascending order.");
             this.ButtonBubbleSort.UseVisualStyleBackColor = true;
             this.ButtonBubbleSort.Click += new System.EventHandler(this.ButtonBubbleSort_Click);
             // 
@@ -160,6 +167,7 @@
             this.ButtonMidExtreme.Size = new System.Drawing.Size(100, 30);
             this.ButtonMidExtreme.TabIndex = 11;
             this.ButtonMidExtreme.Text = "Mid-Extreme";
+            this.TTMidExtreme.SetToolTip(this.ButtonMidExtreme, resources.GetString("ButtonMidExtreme.ToolTip"));
             this.ButtonMidExtreme.UseVisualStyleBackColor = true;
             // 
             // ButtonMode
@@ -285,6 +293,9 @@
         private System.Windows.Forms.TextBox TextBoxAverage;
         private System.Windows.Forms.TextBox TextBoxRange;
         private System.Windows.Forms.ToolTip TTListBoxdata;
+        private System.Windows.Forms.ToolTip TTAstroDataButton;
+        private System.Windows.Forms.ToolTip TTBubbleSort;
+        private System.Windows.Forms.ToolTip TTMidExtreme;
     }
 }
 
