@@ -217,24 +217,23 @@ namespace AstroData
                 return;
             }
 
-            bool inserted = false;
-            if (!(ListBoxData.SelectedIndex == -1) && (ListBoxData.SelectedIndex == 0))
+            if (ListBoxData.SelectedIndex != -1 && ListBoxData.SelectedItem != null)
             {
                 string currIndexInput = ListBoxData.SelectedItem.ToString();
                 int indxInput = ListBoxData.FindString(currIndexInput);
-                dataArray[indxInput] = inputVal;
-                isFilledArray[indxInput] = true;
-                Array.Sort(dataArray, 0, indxInput);
-                DisplayDataArray();
 
-                // Clear the text box
-                TextBoxInputData.Clear();
+                    dataArray[indxInput] = inputVal;
+                    isFilledArray[indxInput] = true;
+                    Array.Sort(dataArray, 0, indxInput);
+                    DisplayDataArray();
+
+                    // Clear the text box
+                    TextBoxInputData.Clear();
+
+
             }
 
-            if (!inserted)
-            {
-                MessageBox.Show("Data array is now full.", "Error message (Input method)");
-            }
+            
             
 
         } // End of Data input method

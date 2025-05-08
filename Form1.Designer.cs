@@ -71,14 +71,14 @@
             // 
             // TextBoxSearch
             // 
-            this.TextBoxSearch.Location = new System.Drawing.Point(166, 142);
+            this.TextBoxSearch.Location = new System.Drawing.Point(166, 119);
             this.TextBoxSearch.Name = "TextBoxSearch";
             this.TextBoxSearch.Size = new System.Drawing.Size(86, 20);
             this.TextBoxSearch.TabIndex = 3;
             // 
             // ButtonBinarySearch
             // 
-            this.ButtonBinarySearch.Location = new System.Drawing.Point(166, 168);
+            this.ButtonBinarySearch.Location = new System.Drawing.Point(166, 145);
             this.ButtonBinarySearch.Name = "ButtonBinarySearch";
             this.ButtonBinarySearch.Size = new System.Drawing.Size(86, 23);
             this.ButtonBinarySearch.TabIndex = 4;
@@ -98,7 +98,7 @@
             // LabelBinarySearch
             // 
             this.LabelBinarySearch.AutoSize = true;
-            this.LabelBinarySearch.Location = new System.Drawing.Point(166, 126);
+            this.LabelBinarySearch.Location = new System.Drawing.Point(166, 103);
             this.LabelBinarySearch.Name = "LabelBinarySearch";
             this.LabelBinarySearch.Size = new System.Drawing.Size(86, 13);
             this.LabelBinarySearch.TabIndex = 6;
@@ -106,14 +106,14 @@
             // 
             // TextBoxInputData
             // 
-            this.TextBoxInputData.Location = new System.Drawing.Point(166, 244);
+            this.TextBoxInputData.Location = new System.Drawing.Point(166, 202);
             this.TextBoxInputData.Name = "TextBoxInputData";
             this.TextBoxInputData.Size = new System.Drawing.Size(86, 20);
             this.TextBoxInputData.TabIndex = 7;
             // 
             // ButtonInputData
             // 
-            this.ButtonInputData.Location = new System.Drawing.Point(166, 270);
+            this.ButtonInputData.Location = new System.Drawing.Point(166, 228);
             this.ButtonInputData.Name = "ButtonInputData";
             this.ButtonInputData.Size = new System.Drawing.Size(86, 36);
             this.ButtonInputData.TabIndex = 8;
@@ -124,7 +124,7 @@
             // LabelInputValue
             // 
             this.LabelInputValue.AutoSize = true;
-            this.LabelInputValue.Location = new System.Drawing.Point(165, 228);
+            this.LabelInputValue.Location = new System.Drawing.Point(166, 186);
             this.LabelInputValue.Name = "LabelInputValue";
             this.LabelInputValue.Size = new System.Drawing.Size(76, 13);
             this.LabelInputValue.TabIndex = 9;
