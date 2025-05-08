@@ -236,10 +236,6 @@ namespace AstroData
                     // Clear the text box
                     TextBoxInputData.Clear();
             }
-
-            
-            
-
         } // End of Data input method
 
 
@@ -260,7 +256,6 @@ namespace AstroData
             {
                 MessageBox.Show("Select an item for deletion from the data", "Error message (Delete method)");
             }
-        }
 
 
 
