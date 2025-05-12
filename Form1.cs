@@ -268,10 +268,10 @@ namespace AstroData
         private void ButtonMidExtreme_Click(object sender, EventArgs e)
         {
             // These two variables determine and store the smallest and largest value
-            int minValMidEx = dataArray.Min();
-            int maxValMidEx = dataArray.Max();
+            float minValMidEx = dataArray.Min();
+            float maxValMidEx = dataArray.Max();
 
-            // This varialbe gets the sum of the smallest and largest value, adds them together,
+            // This variable gets the sum of the smallest and largest value, adds them together,
             // and then divides them by two to get the Mid-extreme
             float resMidEx = (minValMidEx + maxValMidEx) / 2;
 
@@ -304,7 +304,8 @@ namespace AstroData
         // Average method
         private void ButtonAverage_Click(object sender, EventArgs e)
         {
-            float averageSum = (dataArray.Sum() / 20);
+            float arraySizeFlt = 20;
+            float averageSum = (dataArray.Sum() / arraySizeFlt);
 
             TextBoxAverage.Text = averageSum.ToString("N2");
 
