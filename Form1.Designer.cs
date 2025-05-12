@@ -179,6 +179,7 @@
             this.ButtonMode.TabIndex = 12;
             this.ButtonMode.Text = "Mode";
             this.ButtonMode.UseVisualStyleBackColor = true;
+            this.ButtonMode.Click += new System.EventHandler(this.ButtonMode_Click);
             // 
             // ButtonAverage
             // 
@@ -223,6 +224,7 @@
             this.TextBoxMode.ReadOnly = true;
             this.TextBoxMode.Size = new System.Drawing.Size(98, 20);
             this.TextBoxMode.TabIndex = 17;
+            this.TextBoxMode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TextBoxAverage
             // 
@@ -231,6 +233,7 @@
             this.TextBoxAverage.ReadOnly = true;
             this.TextBoxAverage.Size = new System.Drawing.Size(98, 20);
             this.TextBoxAverage.TabIndex = 18;
+            this.TextBoxAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TextBoxRange
             // 
@@ -239,6 +242,7 @@
             this.TextBoxRange.ReadOnly = true;
             this.TextBoxRange.Size = new System.Drawing.Size(98, 20);
             this.TextBoxRange.TabIndex = 19;
+            this.TextBoxRange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AstroDataForm
             // 

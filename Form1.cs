@@ -52,6 +52,7 @@ namespace AstroData
         }
 
 
+
         // Start of Global variables area
 
         // This is where we declare the global variable that will control the max number of values
@@ -279,6 +280,24 @@ namespace AstroData
             TextBoxMidExtreme.Text = resMidEx.ToString("0.00");
 
         } // End of Mid-extreme method
+
+
+
+        // Mode method
+        private void ButtonMode_Click(object sender, EventArgs e)
+        {
+            // Here we declare a variable that searches the array for each occurence of each
+            // value and groups them together, then sorting the groups so that the group with the
+            // greatest value is the first in the order, and returning that value as the mode.
+            int mode = dataArray.GroupBy(arrayVal => arrayVal)
+                                .OrderByDescending(valGroup => valGroup.Count())
+                                .First()
+                                .Key;
+
+            // This is where we display the mode in a text box
+            TextBoxMode.Text = mode.ToString();
+
+        }// End of Mode method
 
 
 
