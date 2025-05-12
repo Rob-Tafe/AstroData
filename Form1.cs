@@ -263,6 +263,25 @@ namespace AstroData
 
 
 
+        // Mid-extreme method
+        private void ButtonMidExtreme_Click(object sender, EventArgs e)
+        {
+            // These two variables determine and store the smallest and largest value
+            int minValMidEx = dataArray.Min();
+            int maxValMidEx = dataArray.Max();
+
+            // This varialbe gets the sum of the smallest and largest value, adds them together,
+            // and then divides them by two to get the Mid-extreme
+            int resMidEx = (minValMidEx + maxValMidEx) / 2;
+
+            // This is where we display our result in a text box that is formatted to two
+            // decimal places
+            TextBoxMidExtreme.Text = resMidEx.ToString("0.00");
+
+        } // End of Mid-extreme method
+
+
+
     } // End of partial public class AstroDataForm : Form
 
 

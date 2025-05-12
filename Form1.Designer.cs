@@ -169,6 +169,7 @@
             this.ButtonMidExtreme.Text = "Mid-Extreme";
             this.TTMidExtreme.SetToolTip(this.ButtonMidExtreme, resources.GetString("ButtonMidExtreme.ToolTip"));
             this.ButtonMidExtreme.UseVisualStyleBackColor = true;
+            this.ButtonMidExtreme.Click += new System.EventHandler(this.ButtonMidExtreme_Click);
             // 
             // ButtonMode
             // 
@@ -213,6 +214,7 @@
             this.TextBoxMidExtreme.ReadOnly = true;
             this.TextBoxMidExtreme.Size = new System.Drawing.Size(98, 20);
             this.TextBoxMidExtreme.TabIndex = 16;
+            this.TextBoxMidExtreme.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TextBoxMode
             // 
