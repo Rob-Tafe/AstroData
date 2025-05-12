@@ -137,7 +137,7 @@ the smallest value subtracted
 from the largest value, which is
 then divided by two.
 
-(Largest - Smallest) / 2</value>
+(Largest + Smallest) / 2</value>
   </data>
   <metadata name="TTListBoxdata.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

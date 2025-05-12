@@ -273,11 +273,11 @@ namespace AstroData
 
             // This varialbe gets the sum of the smallest and largest value, adds them together,
             // and then divides them by two to get the Mid-extreme
-            int resMidEx = (minValMidEx + maxValMidEx) / 2;
+            float resMidEx = (minValMidEx + maxValMidEx) / 2;
 
             // This is where we display our result in a text box that is formatted to two
             // decimal places
-            TextBoxMidExtreme.Text = resMidEx.ToString("0.00");
+            TextBoxMidExtreme.Text = resMidEx.ToString("N2");
 
         } // End of Mid-extreme method
 
@@ -298,6 +298,17 @@ namespace AstroData
             TextBoxMode.Text = mode.ToString();
 
         }// End of Mode method
+
+
+
+        // Average method
+        private void ButtonAverage_Click(object sender, EventArgs e)
+        {
+            float averageSum = (dataArray.Sum() / 20);
+
+            TextBoxAverage.Text = averageSum.ToString("N2");
+
+        } // End of Average method
 
 
 

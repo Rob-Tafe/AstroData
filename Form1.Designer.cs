@@ -189,6 +189,7 @@
             this.ButtonAverage.TabIndex = 13;
             this.ButtonAverage.Text = "Average";
             this.ButtonAverage.UseVisualStyleBackColor = true;
+            this.ButtonAverage.Click += new System.EventHandler(this.ButtonAverage_Click);
             // 
             // ButtonRange
             // 
@@ -211,6 +212,7 @@
             // TextBoxMidExtreme
             // 
             this.TextBoxMidExtreme.Location = new System.Drawing.Point(11, 105);
+            this.TextBoxMidExtreme.MaxLength = 4;
             this.TextBoxMidExtreme.Name = "TextBoxMidExtreme";
             this.TextBoxMidExtreme.ReadOnly = true;
             this.TextBoxMidExtreme.Size = new System.Drawing.Size(98, 20);
@@ -220,6 +222,7 @@
             // TextBoxMode
             // 
             this.TextBoxMode.Location = new System.Drawing.Point(11, 180);
+            this.TextBoxMode.MaxLength = 4;
             this.TextBoxMode.Name = "TextBoxMode";
             this.TextBoxMode.ReadOnly = true;
             this.TextBoxMode.Size = new System.Drawing.Size(98, 20);
@@ -229,6 +232,7 @@
             // TextBoxAverage
             // 
             this.TextBoxAverage.Location = new System.Drawing.Point(11, 260);
+            this.TextBoxAverage.MaxLength = 4;
             this.TextBoxAverage.Name = "TextBoxAverage";
             this.TextBoxAverage.ReadOnly = true;
             this.TextBoxAverage.Size = new System.Drawing.Size(98, 20);
@@ -238,6 +242,7 @@
             // TextBoxRange
             // 
             this.TextBoxRange.Location = new System.Drawing.Point(11, 340);
+            this.TextBoxRange.MaxLength = 4;
             this.TextBoxRange.Name = "TextBoxRange";
             this.TextBoxRange.ReadOnly = true;
             this.TextBoxRange.Size = new System.Drawing.Size(98, 20);
