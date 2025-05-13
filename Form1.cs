@@ -340,28 +340,19 @@ namespace AstroData
             if (!(Int32.TryParse(TextBoxSearch.Text, out sqsTarget)))
             {
                 MessageBox.Show("You must enter an Integer.", "Error message (Sequential search method)");
-                return;
             }
-
-            for (int arryVal = 0; arryVal < dataValueQty; arryVal++)
+                else if (dataArray[arryVal] == sqsTarget)
             {
-                if (dataArray[arryVal] == sqsTarget)
-                {
                     ListBoxData.Items.Add("Found at index " + (arryVal + 1));
                     sqsFound = true;
                     ListBoxData.SetSelected(arryVal, true);
                     TextBoxSearch.Clear();
-                    return;
                 }
-            }
-
-            if (!sqsFound)
+                else
             {
                 MessageBox.Show("Value was not found in the data.");
                 TextBoxSearch.Clear();
             }
-
-
 
         } // End of Sequential search method
 
