@@ -12,9 +12,9 @@
 //
 // Sprint #:    2
 //
-// Date:        08 / 05 / 2025
+// Date:        13 / 05 / 2025
 //
-// Version:     0.2
+// Version:     1.0
 
 
 
@@ -154,6 +154,7 @@ namespace AstroData
 
             if (!Int32.TryParse(TextBoxSearch.Text, out target)) {
                 MessageBox.Show("You must enter an Integer.", "Error message (Binary search method)");
+                TextBoxSearch.Clear();
                 return;
             }
 
@@ -332,26 +333,33 @@ namespace AstroData
         // Sequential search method
         private void buttonSequentialSearch_Click(object sender, EventArgs e)
         {
+            DisplayDataArray();
+
             int sqsTarget;
             bool sqsFound = false;
 
-            DisplayDataArray();
-
-            if (!(Int32.TryParse(TextBoxSearch.Text, out sqsTarget)))
+            for (int arryIndxOfVal = 0; arryIndxOfVal <= dataValueQty; arryIndxOfVal++)
             {
-                MessageBox.Show("You must enter an Integer.", "Error message (Sequential search method)");
-            }
-                else if (dataArray[arryVal] == sqsTarget)
-            {
-                    ListBoxData.Items.Add("Found at index " + (arryVal + 1));
-                    sqsFound = true;
-                    ListBoxData.SetSelected(arryVal, true);
+                if (!(Int32.TryParse(TextBoxSearch.Text, out sqsTarget)))
+                {
+                    MessageBox.Show("You must enter an Integer.", "Error message (Sequential search method)");
                     TextBoxSearch.Clear();
+                    return;
                 }
-                else
-            {
-                MessageBox.Show("Value was not found in the data.");
-                TextBoxSearch.Clear();
+                else if ((!sqsFound) && (arryIndxOfVal >= dataValueQty))
+                {
+                    MessageBox.Show("Value was not found in the data.");
+                    TextBoxSearch.Clear();
+                    return;
+                }
+                else if (Int32.TryParse(TextBoxSearch.Text, out sqsTarget) && (sqsTarget == dataArray[arryIndxOfVal]))
+                {
+                    ListBoxData.Items.Add("Found at index " + (arryIndxOfVal + 1));
+                    sqsFound = true;
+                    ListBoxData.SetSelected(arryIndxOfVal, true);
+                    TextBoxSearch.Clear();
+                    return;
+                }
             }
 
         } // End of Sequential search method
