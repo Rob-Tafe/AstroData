@@ -209,6 +209,7 @@
             this.buttonSequentialSearch.TabIndex = 15;
             this.buttonSequentialSearch.Text = "Sequential Search";
             this.buttonSequentialSearch.UseVisualStyleBackColor = true;
+            this.buttonSequentialSearch.Click += new System.EventHandler(this.buttonSequentialSearch_Click);
             // 
             // TextBoxMidExtreme
             // 

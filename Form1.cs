@@ -163,6 +163,7 @@ namespace AstroData
             {
                 DisplayDataArray();
                 MessageBox.Show("Target is outside the range of the data.", "Error message (Binary search method)");
+                TextBoxSearch.Clear();
                 return;
             }
 
@@ -325,6 +326,44 @@ namespace AstroData
             TextBoxRange.Text = rangeFinal.ToString("N2");
 
         } // End of Range method
+
+
+
+        // Sequential search method
+        private void buttonSequentialSearch_Click(object sender, EventArgs e)
+        {
+            int sqsTarget;
+            bool sqsFound = false;
+
+            DisplayDataArray();
+
+            if (!(Int32.TryParse(TextBoxSearch.Text, out sqsTarget)))
+            {
+                MessageBox.Show("You must enter an Integer.", "Error message (Sequential search method)");
+                return;
+            }
+
+            for (int arryVal = 0; arryVal < dataValueQty; arryVal++)
+            {
+                if (dataArray[arryVal] == sqsTarget)
+                {
+                    ListBoxData.Items.Add("Found at index " + (arryVal + 1));
+                    sqsFound = true;
+                    ListBoxData.SetSelected(arryVal, true);
+                    TextBoxSearch.Clear();
+                    return;
+                }
+            }
+
+            if (!sqsFound)
+            {
+                MessageBox.Show("Value was not found in the data.");
+                TextBoxSearch.Clear();
+            }
+
+
+
+        } // End of Sequential search method
 
 
 
