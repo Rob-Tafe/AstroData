@@ -199,6 +199,7 @@
             this.ButtonRange.TabIndex = 14;
             this.ButtonRange.Text = "Range";
             this.ButtonRange.UseVisualStyleBackColor = true;
+            this.ButtonRange.Click += new System.EventHandler(this.ButtonRange_Click);
             // 
             // buttonSequentialSearch
             // 

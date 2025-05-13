@@ -313,6 +313,21 @@ namespace AstroData
 
 
 
+        // Range method
+        private void ButtonRange_Click(object sender, EventArgs e)
+        {
+            // These variable will determine the smallest and largest values in the data array
+            float rangeSmall = dataArray.Min();
+            float rangeLarge = dataArray.Max();
+
+            float rangeFinal = rangeLarge - rangeSmall;
+
+            TextBoxRange.Text = rangeFinal.ToString("N2");
+
+        } // End of Range method
+
+
+
     } // End of partial public class AstroDataForm : Form
 
 
