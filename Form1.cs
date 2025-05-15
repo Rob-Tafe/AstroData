@@ -130,6 +130,39 @@ namespace AstroData
 
 
 
+        // This is a duplicate of the bubble sort button method that we can call when needed
+        private void BubbleSort()
+        {
+            // Here we declare a variable to store the value of the array that is being reorganised
+            int arrayValueStorage = 0;
+
+            // This is the for loop that will organise our array of values
+            for (int outer = 0; outer < dataValueQty; outer++)
+            {
+                for (int inner = 0; inner < dataValueQty - 1; inner++)
+                {
+                    if (dataArray[inner] > dataArray[inner + 1])
+                    {
+                        // This is the routine that moves the values around in the array
+                        arrayValueStorage = dataArray[inner + 1];
+                        dataArray[inner + 1] = dataArray[inner];
+                        dataArray[inner] = arrayValueStorage;
+                    }
+
+                    // Clear any previous data that was written to the listbox
+                    ListBoxData.Items.Clear();
+
+                    // Call the DisplayDataArray method to show the values on the listbox
+                    DisplayDataArray();
+                    Application.DoEvents();
+                    // Thread.Sleep(50);
+                }
+            }
+
+        } // End of duplicate bubble sort method
+
+
+
         // Method to display the array in the listbox
         private void DisplayDataArray()
         {
@@ -147,6 +180,11 @@ namespace AstroData
         // Binary search method
         private void ButtonBinarySearch_Click(object sender, EventArgs e)
         {
+            // First, we call the duplicate bubble sort method to organise the data array so that
+            // the binary search can do its job
+            BubbleSort();
+
+            // Then we set the variables to control the operation of the binary search
             int mid;
             int lowBound = 0;
             int highBound = dataValueQty - 1;
@@ -247,14 +285,14 @@ namespace AstroData
         // Data delete method
         private void ButtonDeleteData_Click(object sender, EventArgs e)
         {
-            if (!(ListBoxData.SelectedIndex == -1))
+            if (ListBoxData.SelectedIndex != -1)
             {
                 string currIndexDel = ListBoxData.SelectedItem.ToString();
                 int indxDel = ListBoxData.FindString(currIndexDel);
-                dataArray[indxDel] = dataArray[delVal];
-                dataArray[delVal] = 0;
-                isFilledArray[delVal] = false;
-                Array.Sort(dataArray, 0, delVal);
+                isFilledArray[indxDel] = false;
+                dataArray[indxDel] = delVal;
+
+                Array.Sort(dataArray);
                 DisplayDataArray();
             }
             else
@@ -270,7 +308,7 @@ namespace AstroData
         private void ButtonMidExtreme_Click(object sender, EventArgs e)
         {
             // These two variables determine and store the smallest and largest value
-            float minValMidEx = dataArray.Min();
+            float minValMidEx = dataArray.Where(x => x != 0).DefaultIfEmpty().Min();
             float maxValMidEx = dataArray.Max();
 
             // This variable gets the sum of the smallest and largest value, adds them together,
@@ -319,7 +357,7 @@ namespace AstroData
         private void ButtonRange_Click(object sender, EventArgs e)
         {
             // These variable will determine the smallest and largest values in the data array
-            float rangeSmall = dataArray.Min();
+            float rangeSmall = dataArray.Where(x => x != 0).DefaultIfEmpty().Min();
             float rangeLarge = dataArray.Max();
 
             float rangeFinal = rangeLarge - rangeSmall;
