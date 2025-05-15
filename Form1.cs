@@ -87,7 +87,7 @@ namespace AstroData
             // This is the for loop that will add random values to 'dataArray' until it is full
             for (int i = 0; i < dataValueQty; i++)
             {
-                dataArray[i] = randValue.Next(1, 101);
+                dataArray[i] = randValue.Next(10, 91);
                 isFilledArray[i] = true;
             }
 
