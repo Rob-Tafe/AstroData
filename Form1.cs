@@ -340,7 +340,7 @@ namespace AstroData
             // This is where we display the mode in a text box
             TextBoxMode.Text = $"{modeValue} (x {modeQty})";
 
-        }// End of Mode method
+        } // End of Mode method
 
 
 
