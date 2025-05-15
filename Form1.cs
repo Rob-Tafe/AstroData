@@ -271,7 +271,7 @@ namespace AstroData
 
                     dataArray[indxInput] = inputVal;
                     isFilledArray[indxInput] = true;
-                    Array.Sort(dataArray, 0, indxInput);
+                    Array.Sort(dataArray);
                     DisplayDataArray();
 
                     // Clear the text box
@@ -328,14 +328,17 @@ namespace AstroData
         {
             // Here we declare a variable that searches the array for each occurence of each
             // value and groups them together, then sorting the groups so that the group with the
-            // greatest value is the first in the order, and returning that value as the mode.
-            int mode = dataArray.GroupBy(arrayVal => arrayVal)
+            // greatest value is the first in the order.
+            var mode = dataArray.GroupBy(arrayVal => arrayVal)
                                 .OrderByDescending(valGroup => valGroup.Count())
-                                .First()
-                                .Key;
+                                .First();
+
+            // These variables get the value and the number of times it occurs from the mode variable
+            int modeValue = mode.Key;
+            int modeQty = mode.Count();
 
             // This is where we display the mode in a text box
-            TextBoxMode.Text = mode.ToString();
+            TextBoxMode.Text = $"{modeValue} (x {modeQty})";
 
         }// End of Mode method
 
