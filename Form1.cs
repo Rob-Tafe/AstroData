@@ -174,8 +174,8 @@ namespace AstroData
             {
                 if (!(dataArray[i] == 0))
                 {
-                ListBoxData.Items.Add($"{i + 1}.            {dataArray[i]}");
-            }
+                    ListBoxData.Items.Add($"{i + 1}.            {dataArray[i]}");
+                }
                 else
                 {
                     ListBoxData.Items.Add($"{i + 1}.            -");
