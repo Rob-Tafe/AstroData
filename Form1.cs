@@ -68,6 +68,8 @@ namespace AstroData
         // This is the variable that will be used to delete things from our array
         int delVal = 0;
 
+
+
         // End of Global variables area
 
 
@@ -170,7 +172,14 @@ namespace AstroData
             // This for loop iterates through and prints each line of the array to the listbox
             for (int i = 0; i < dataValueQty; i++)
             {
+                if (!(dataArray[i] == 0))
+                {
                 ListBoxData.Items.Add($"{i + 1}.            {dataArray[i]}");
+            }
+                else
+                {
+                    ListBoxData.Items.Add($"{i + 1}.            -");
+                }
             }
 
         } // End of DisplayDataArray method
@@ -180,9 +189,6 @@ namespace AstroData
         // Binary search method
         private void ButtonBinarySearch_Click(object sender, EventArgs e)
         {
-            // First, we call the duplicate bubble sort method to organise the data array so that
-            // the binary search can do its job
-            BubbleSort();
 
             // Then we set the variables to control the operation of the binary search
             int mid;
@@ -195,6 +201,10 @@ namespace AstroData
                 TextBoxSearch.Clear();
                 return;
             }
+
+            // Here, we call the duplicate bubble sort method to organise the data array so that
+            // the binary search can do its job
+            BubbleSort();
 
             // This if statement checks to make sure that the value being searched is in the
             // range of the data and returns an error message if it isn't
